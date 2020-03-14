@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{background-color: yellow;
+			font-family: serif;
+			font-size: 1.2em;
+			color: blue;}
+
+		#title{font-family: monospace;
+			color: green;}
+		#description{color:green;}
+		#survey-form{background-color: pink;
+			border-style: groove;
+			border-color: red;
+			border-bottom-right-radius: 10%;
+			justify-content: center;
+			margin: 2em 7em 2em 5em;
+			padding:auto;}
+		#box-container{display:;}
+		
+		#headings{display:grid;
+			grid-row-gap:0.7em;
+}
+		#content{display: flex;
+			flex-direction: column;
+			align-items:baseline; ;
+			position: relative;
+		grid-row-gap:;}
+
+
+			.input{margin:1.2em 0 0 0;}
+	</style>
+	<title>Freecodecamp survey from challenge</title>
+</head>
+<body>
+	<header>
+		<h1 id="title">Patient Data Form</h1>
+	</header>
+	<main>
+		<p id="description">This survey is intended to collect data from patients to understand their opinion regarding services rendered in the clinic</p>
+		<form id="survey-form" method="get" action=""> 
+			<div id="box-container">
+			
+			<div id="headings">
+				<li>
+				<label for="patient ID" id="number-label" class="label">*Patient ID number</label></li>
+				<li>
+				<label for="your-name" id="Name-label" class="label">*Name</label></li>
+				<li>
+				<label id="email-label" for="email-address">*Email</label>
+				<li><label id="Date" for="Date-of Visit">*Date of Visit</label> 
+				<li>Purpose of visit</li>
+				<ul><li><label id="first-visit-label" for="Purpose-of-visit">First visit</label></li>
+					<li><label id="follow-up-label" for="Purpose-of-visit">Follow up</label></li></ul>	
+					<li><label id="Age-label" for="Age">*Age</label></li>
+					<li>What did you get<br></li>
+				<ul><li><label id="Glasses" for="Purchases">Glasses</label></li>
+					<li><label id="Drugs-label" for="Purchases">Drugs</label></li></ul>	
+				<li>Will you be back?</li>
+				<ul><li><label id="yes" for="will-you-be-back?">Yes</label></li>
+					<li><label id="no" for="will-you-be-back?">No</label></li></ul>
+				<div>If no, why?<textarea id="reason" placeholder="give your reason(s)"></textarea></div>
+
+			</div>
+			
+		
+			<div id="content">
+				<input type= "number" placeholder="ID number" min="1" max="100" name="patient ID" >
+				<input type="text" name="patients-name" placeholder="your name" required="patients-name" class="input">
+				<input type="email" name="email" placeholder="your email" required="email-address" class="input">
+				<input type="Date" name="Date-of-Visit" required="Date-of-Visit" class="input">
+				<input type="radio" name="visit" id="first-visit">
+				<input type="radio" name="visit" id="follow-up-visit">
+			<select id="dropdown" name="Age" required="Age">
+			 	<option disabled value>select an option</option>
+			 	<option value="0-18">0-17</option>
+			 	<option value="18-24">18-24</option>
+			 	<option value="25-39">25-39</option>
+			 	<option value="Over-40">>40</option>
+			 </select>
+			 	<input type="checkbox" value="Drugs" name="Drugs-Glasses">
+			 	<input type="checkbox" value="Glasses" name="Drugs-Glasses">
+			 	<input type="radio" value="yes" name="yes-no"> 
+			 	<input type="radio" value="no" name="yes-no">
+			</div>
+		</div>
+			<input id="submit-button" type="submit" name="submit">
+		</form>
+		<h3>Thanks for your time</h3>
+	</main>
+		<footer>Please note that your information will be treated with utmost privacy</footer>
+	
+</body>
+</html>
